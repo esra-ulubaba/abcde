@@ -39,6 +39,9 @@ SELECT * FROM users;
 5. dockerfile dosyasına git: cd build/web
 6.docker image başlat: docker build -t ymsfinal .
 7.docker container oluştur: docker run -d -p 8090:8080 -p 4849:4848 --name ymsfinal-container ymsfinal
+
+docker-compose up -d --build
+
 8. 404 hatası alırsan şunu yaz: docker logs -f ymsfinal-container
 9.pipeline kodu: pipeline {
     agent any
@@ -91,4 +94,14 @@ SELECT * FROM users;
         }
     }
 }
+
+github için: cd C:\Users\WINUSER\Desktop\ymsfinal
+
+git init
+git add .
+git commit -m "YMSFinal Docker WebApp initial commit"
+git branch -M main
+git remote add origin https://github.com/KULLANICI_ADIN/ymsfinal.git
+git push -u origin main
+
 
